@@ -67,7 +67,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Colors.white,
       body: Center(
           child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -75,7 +75,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
           Text(
             'Weight Loss',
             style: TextStyle(
-                color: Colors.blueGrey[50],
+                color: Colors.blueGrey[800],
                 fontWeight: FontWeight.w800,
                 fontStyle: FontStyle.italic,
                 fontFamily: 'Open Sans',
@@ -87,7 +87,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
           Text(
             'Before and After',
             style: TextStyle(
-                color: Colors.blueGrey[200],
+                color: Colors.blueGrey[400],
                 fontWeight: FontWeight.w800,
                 fontStyle: FontStyle.italic,
                 fontFamily: 'Open Sans',

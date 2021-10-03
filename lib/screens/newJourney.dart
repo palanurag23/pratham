@@ -825,7 +825,7 @@ class _AddNewJourneyState extends State<AddNewJourney> {
                                 fontStyle: FontStyle.normal,
                                 fontSize: 20 * ratio,
                                 fontWeight: FontWeight.w600),
-                            axis: Axis.horizontal,
+                            axis: Axis.vertical,
                             minValue: 1,
                             maxValue: 52,
                             value: duration,
