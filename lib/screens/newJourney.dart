@@ -137,8 +137,9 @@ class _AddNewJourneyState extends State<AddNewJourney> {
     try {
       print('b');
       pickedFile = await picker.getImage(
-        source: imageSource,maxHeight: 2240,
-      maxWidth: 2240,
+        source: imageSource,
+        maxHeight: 2240,
+        maxWidth: 2240,
       );
       print('${pickedFile.path}');
     } catch (e) {
@@ -415,20 +416,18 @@ class _AddNewJourneyState extends State<AddNewJourney> {
                                   top: 0,
                                   right: 0,
                                   child: FlatButton(
-minWidth: 30,
-height:30,
-padding: EdgeInsets.all(0),
-                                      color: Colors.white38,
-                            shape: RoundedRectangleBorder(
-                                side: BorderSide(
+                                    minWidth: 30,
+                                    height: 30,
+                                    padding: EdgeInsets.all(0),
                                     color: Colors.white38,
-                                    width: 1,
-
-
-                                    style: BorderStyle.solid),
-                                borderRadius: BorderRadius.circular(50)),
-                            disabledColor: Colors.white38,
-
+                                    shape: RoundedRectangleBorder(
+                                        side: BorderSide(
+                                            color: Colors.white38,
+                                            width: 1,
+                                            style: BorderStyle.solid),
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
+                                    disabledColor: Colors.white38,
                                     child: Icon(
                                       Icons.cancel_outlined,
                                       color: Colors.blueGrey[800],
@@ -810,6 +809,7 @@ padding: EdgeInsets.all(0),
                         ),
                       if (timeLimit) Divider(),
                       if (timeLimit)
+                        //////////////////////////////////////////////////----------------------------------------------------------------
                         NumberPicker(
                             textStyle: TextStyle(
                                 color: Colors.blueGrey[200],
