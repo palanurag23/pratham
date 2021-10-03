@@ -721,132 +721,132 @@ class _AddNewJourneyState extends State<AddNewJourney> {
                 //DURATION
                 // if (steps == 5)
                 // ,
-                Container(
-                  margin: EdgeInsets.only(top: 10 * ratio, left: 40, right: 40),
-                  padding: EdgeInsets.only(
-                    top: 20 * ratio, bottom: 10,
-                    //left: 20, right: 20
-                  ),
-                  decoration: BoxDecoration(
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //     color: Colors.grey[400],
-                    //     offset: Offset(1, 3), //(x,y)
-                    //     blurRadius: 2.0,
-                    //   ),
-                    // ],
-                    // border: Border.all(color: Colors.black, width: 1),
-                    color: Colors.blueGrey[50],
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(11),
-                  ),
-                  child: Column(
-                    children: [
-                      RichText(
-                        text: TextSpan(
-                            text: 'Time limit ',
-                            style: TextStyle(
-                                color: Colors.blueGrey[500],
-                                fontStyle: FontStyle.normal,
-                                fontSize: 20 * ratio,
-                                fontWeight: FontWeight.w500),
-                            children: <TextSpan>[
-                              if (!timeLimit)
-                                TextSpan(
-                                    text: '?',
-                                    style: TextStyle(
-                                        color: Colors.blueGrey[500],
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 20 * ratio,
-                                        fontWeight: FontWeight.w500)),
-                              if (timeLimit)
-                                TextSpan(
-                                    text: duration.toString(),
-                                    style: TextStyle(
-                                        color: Colors.blueGrey[700],
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 23 * ratio,
-                                        fontWeight: FontWeight.w500)),
-                              if (timeLimit)
-                                TextSpan(
-                                    text: duration > 1 ? ' weeks' : ' week',
-                                    style: TextStyle(
-                                        color: Colors.blueGrey[500],
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 12 * ratio,
-                                        fontWeight: FontWeight.bold))
-                            ]),
-                      ),
-                      if (!timeLimit)
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            TextButton(
-                                onPressed: () {},
-                                child: Text('No',
-                                    style: TextStyle(
-                                        color: Colors.redAccent,
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 15 * ratio,
-                                        fontWeight: FontWeight.w500))),
-                            TextButton(
-                                onPressed: () {
-                                  setState(() {
-                                    timeLimit = true;
-                                  });
-                                  scrollController.animateTo(
-                                      scrollController.position.maxScrollExtent,
-                                      duration: Duration(milliseconds: 0),
-                                      curve: Curves.easeInOut);
-                                },
-                                child: Text('Yes',
-                                    style: TextStyle(
-                                        color: Colors.green[700],
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 15 * ratio,
-                                        fontWeight: FontWeight.w500)))
-                          ],
-                        ),
-                      if (timeLimit) Divider(),
-                      if (timeLimit)
-                        //////////////////////////////////////////////////----------------------------------------------------------------
-                        NumberPicker(
-                            textStyle: TextStyle(
-                                color: Colors.blueGrey[200],
-                                fontStyle: FontStyle.normal,
-                                fontSize: 15 * ratio,
-                                fontWeight: FontWeight.w600),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(33),
-                              border: Border.all(color: Colors.white),
-                            ),
-                            selectedTextStyle: TextStyle(
-                                color: Colors.blueGrey[700],
-                                fontStyle: FontStyle.normal,
-                                fontSize: 20 * ratio,
-                                fontWeight: FontWeight.w600),
-                            axis: Axis.vertical,
-                            minValue: 1,
-                            maxValue: 52,
-                            value: duration,
-                            onChanged: (value) =>
-                                setState(() => duration = value)),
-                      if (timeLimit)
-                        TextButton(
-                            onPressed: () {
-                              setState(() {
-                                timeLimit = false;
-                              });
-                            },
-                            child: Text('cancel',
-                                style: TextStyle(
-                                    color: Colors.blueGrey[700],
-                                    fontStyle: FontStyle.normal,
-                                    fontSize: 15 * ratio,
-                                    fontWeight: FontWeight.w500))),
-                    ],
-                  ),
-                ),
+                // Container(
+                //   margin: EdgeInsets.only(top: 10 * ratio, left: 40, right: 40),
+                //   padding: EdgeInsets.only(
+                //     top: 20 * ratio, bottom: 10,
+                //     //left: 20, right: 20
+                //   ),
+                //   decoration: BoxDecoration(
+                //     // boxShadow: [
+                //     //   BoxShadow(
+                //     //     color: Colors.grey[400],
+                //     //     offset: Offset(1, 3), //(x,y)
+                //     //     blurRadius: 2.0,
+                //     //   ),
+                //     // ],
+                //     // border: Border.all(color: Colors.black, width: 1),
+                //     color: Colors.blueGrey[50],
+                //     shape: BoxShape.rectangle,
+                //     borderRadius: BorderRadius.circular(11),
+                //   ),
+                //   child: Column(
+                //     children: [
+                //       RichText(
+                //         text: TextSpan(
+                //             text: 'Time limit ',
+                //             style: TextStyle(
+                //                 color: Colors.blueGrey[500],
+                //                 fontStyle: FontStyle.normal,
+                //                 fontSize: 20 * ratio,
+                //                 fontWeight: FontWeight.w500),
+                //             children: <TextSpan>[
+                //               if (!timeLimit)
+                //                 TextSpan(
+                //                     text: '?',
+                //                     style: TextStyle(
+                //                         color: Colors.blueGrey[500],
+                //                         fontStyle: FontStyle.normal,
+                //                         fontSize: 20 * ratio,
+                //                         fontWeight: FontWeight.w500)),
+                //               if (timeLimit)
+                //                 TextSpan(
+                //                     text: duration.toString(),
+                //                     style: TextStyle(
+                //                         color: Colors.blueGrey[700],
+                //                         fontStyle: FontStyle.normal,
+                //                         fontSize: 23 * ratio,
+                //                         fontWeight: FontWeight.w500)),
+                //               if (timeLimit)
+                //                 TextSpan(
+                //                     text: duration > 1 ? ' weeks' : ' week',
+                //                     style: TextStyle(
+                //                         color: Colors.blueGrey[500],
+                //                         fontStyle: FontStyle.normal,
+                //                         fontSize: 12 * ratio,
+                //                         fontWeight: FontWeight.bold))
+                //             ]),
+                //       ),
+                //       if (!timeLimit)
+                //         Row(
+                //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //           children: [
+                //             TextButton(
+                //                 onPressed: () {},
+                //                 child: Text('No',
+                //                     style: TextStyle(
+                //                         color: Colors.redAccent,
+                //                         fontStyle: FontStyle.normal,
+                //                         fontSize: 15 * ratio,
+                //                         fontWeight: FontWeight.w500))),
+                //             TextButton(
+                //                 onPressed: () {
+                //                   setState(() {
+                //                     timeLimit = true;
+                //                   });
+                //                   scrollController.animateTo(
+                //                       scrollController.position.maxScrollExtent,
+                //                       duration: Duration(milliseconds: 0),
+                //                       curve: Curves.easeInOut);
+                //                 },
+                //                 child: Text('Yes',
+                //                     style: TextStyle(
+                //                         color: Colors.green[700],
+                //                         fontStyle: FontStyle.normal,
+                //                         fontSize: 15 * ratio,
+                //                         fontWeight: FontWeight.w500)))
+                //           ],
+                //         ),
+                //       if (timeLimit) Divider(),
+                //       if (timeLimit)
+                //         //////////////////////////////////////////////////----------------------------------------------------------------
+                //         NumberPicker(
+                //             textStyle: TextStyle(
+                //                 color: Colors.blueGrey[200],
+                //                 fontStyle: FontStyle.normal,
+                //                 fontSize: 15 * ratio,
+                //                 fontWeight: FontWeight.w600),
+                //             decoration: BoxDecoration(
+                //               borderRadius: BorderRadius.circular(33),
+                //               border: Border.all(color: Colors.white),
+                //             ),
+                //             selectedTextStyle: TextStyle(
+                //                 color: Colors.blueGrey[700],
+                //                 fontStyle: FontStyle.normal,
+                //                 fontSize: 20 * ratio,
+                //                 fontWeight: FontWeight.w600),
+                //             axis: Axis.vertical,
+                //             minValue: 1,
+                //             maxValue: 52,
+                //             value: duration,
+                //             onChanged: (value) =>
+                //                 setState(() => duration = value)),
+                //       if (timeLimit)
+                //         TextButton(
+                //             onPressed: () {
+                //               setState(() {
+                //                 timeLimit = false;
+                //               });
+                //             },
+                //             child: Text('cancel',
+                //                 style: TextStyle(
+                //                     color: Colors.blueGrey[700],
+                //                     fontStyle: FontStyle.normal,
+                //                     fontSize: 15 * ratio,
+                //                     fontWeight: FontWeight.w500))),
+                //     ],
+                //   ),
+                // ),
                 //   _image == null ? Text('No image selected.') : Image.file(_image),
                 SizedBox(
                   height: 12,
