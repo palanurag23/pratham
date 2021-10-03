@@ -565,7 +565,7 @@ class _Tab2State extends State<Tab2> {
                           maxLength: 50,
                           onChanged: (String note) {
                             print(note);
-                            if (note.characters.length < 50)
+                            if (note.characters.length <= 50)
                               _sharedPreferences.setString('note', note);
                           },
                           textAlign: TextAlign.center,
